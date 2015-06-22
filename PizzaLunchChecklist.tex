@@ -1,65 +1,51 @@
-%&pdfLaTeX
-% !TEX encoding = UTF-8 Unicode
-\documentclass{article}
-\usepackage{ifxetex}
-\ifxetex
-\usepackage{fontspec}
-\setmainfont[Mapping=tex-text]{STIXGeneral}
-\else
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\fi
-\usepackage{textcomp}
+\documentclass[12pt,onecolumn]{article}
+\usepackage[margin=1.0in]{geometry}
+\usepackage[document]{ragged2e}
+\newcommand*{\showline}[1][2]{\makebox[#1in]{\hrulefill}}
 
-\usepackage{amssymb}
 \usepackage{fancyhdr}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-
 \pagestyle{fancy}
 \rhead{}
 \rfoot{}
 \chead{}
 \cfoot{}
-\fancyhead[LO]{
+\fancyhead[CO]{
  {\LARGE{}Pizza Lunch Evaluation Checklist}}
 \fancyfoot[LO]{
- version dated Sept 14, 2013}
+ version dated \today}
 \begin{document}
-
 \baselineskip=18pt
-{\Large{}Name: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_}
 
-{\Large{}Student: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_}
+{\large Name: \showline}\hspace{20pt}
+{\large Student's Advisor: \showline}\\
+\vspace{12pt}
+{\large Student: \showline[2.5]}\hspace{20pt}
+{\large Date: \showline[1.5]}
+\vspace{16pt}
 
-{\Large{}Student's Advisor: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_}
+{\large\textsc{Presentation Aesthetics}}
+\begin{itemize}
+\item Slide content, background, text size, amount of text, layout, figure readability, etc.
+\end{itemize}
+\vspace{100pt}
 
-{\Large{}Date: \_\_\_\_\_\_\_\_\_\_\_\_\_\_}\newpage
+{\large\textsc{Speaking Skills}}
+\begin{itemize}
+\item Volume, speed, ability to retain audience attention, skill at responding  to questions
+\end{itemize}
+\vspace{100pt}
 
-\newpage
-\vspace{18pt}
-{\large{}\textsc{Presentation Aesthetics}}
+{\large\textsc{Context}}
+\begin{itemize}
+\item Appropriate introduction, placement within broader science context, implications
+\end{itemize}
+\vspace{100pt}
 
-$\Psi$ Slide content, background, text size, amount of text, layout, figure readability, 
-etc
-
-\vspace{126pt}
-{\large{}\textsc{Speaking Skills}}
-
-$\Psi$ Volume, speed, ability to retain audience attention, skill at responding 
-to questions
-
-\vspace{126pt}
-{\large{}\textsc{Context}}
-
-$\Psi$ Appropriate introduction, placement within broader science context, implications
-
-\vspace{126pt}
-{\large{}\textsc{Science Content}}
-
-$\Psi$ Appropriate level of science discussion, science and project goals well 
-conveyed
-
-\newpage
+{\large\textsc{Science Content}}
+\begin{itemize}
+\item Appropriate level of science discussion, science and project goals well conveyed
+\end{itemize}
 
 \end{document}
